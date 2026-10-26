@@ -1,0 +1,441 @@
+/* =================================
+   NAVBAR
+================================= */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  width: 100%;
+
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  border-bottom: 1px solid #e4ece5;
+
+  box-shadow:
+    0 5px 20px rgba(39, 83, 48, 0.05);
+}
+
+
+/* =================================
+   NAVBAR CONTAINER
+================================= */
+
+.navbar-container {
+  width: 100%;
+  max-width: 1500px;
+
+  min-height: 74px;
+
+  margin: 0 auto;
+  padding: 0 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 24px;
+}
+
+
+/* =================================
+   LOGO
+================================= */
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  text-decoration: none;
+
+  flex-shrink: 0;
+}
+
+.logo-icon {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px;
+
+  background: #edf7ee;
+
+  font-size: 21px;
+
+  box-shadow:
+    0 5px 15px rgba(65, 130, 76, 0.10);
+}
+
+.logo-text {
+  color: #173d24;
+
+  font-size: 18px;
+  font-weight: 800;
+
+  letter-spacing: -0.4px;
+
+  white-space: nowrap;
+}
+
+.logo-text span {
+  color: #3f8a50;
+}
+
+
+/* =================================
+   NAVIGATION LINKS
+================================= */
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 4px;
+
+  flex: 1;
+}
+
+.nav-link {
+  position: relative;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 10px 12px;
+
+  color: #627168;
+
+  text-decoration: none;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  border-radius: 10px;
+
+  white-space: nowrap;
+
+  transition:
+    color 0.25s ease,
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+.nav-link:hover {
+  color: #287a3e;
+
+  background: #f1f7f2;
+
+  transform: translateY(-1px);
+}
+
+
+/* =================================
+   ACTIVE LINK
+================================= */
+
+.nav-link.active {
+  color: #287a3e;
+
+  background: #edf7ee;
+
+  font-weight: 700;
+}
+
+.nav-link.active::after {
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+  bottom: 3px;
+
+  width: 18px;
+  height: 3px;
+
+  border-radius: 10px;
+
+  background: #4d8b59;
+
+  transform: translateX(-50%);
+}
+
+
+/* =================================
+   FARMER USER AREA
+================================= */
+
+.navbar-user {
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  flex-shrink: 0;
+}
+
+
+/* =================================
+   FARMER PROFILE
+================================= */
+
+.farmer-profile {
+  display: flex;
+  align-items: center;
+
+  gap: 7px;
+
+  padding: 8px 12px;
+
+  color: #31583b;
+
+  background: #f4f8f4;
+
+  border: 1px solid #e0e9e1;
+
+  border-radius: 12px;
+
+  text-decoration: none;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  transition: all 0.25s ease;
+}
+
+.farmer-profile:hover {
+  background: #edf7ee;
+
+  border-color: #cfe0d1;
+
+  color: #287a3e;
+
+  transform: translateY(-1px);
+}
+
+.profile-icon {
+  width: 25px;
+  height: 25px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: white;
+
+  font-size: 15px;
+}
+
+
+/* =================================
+   LOGOUT BUTTON
+================================= */
+
+.logout-button {
+  border: 1px solid #dce7dd;
+
+  border-radius: 11px;
+
+  padding: 9px 13px;
+
+  background: white;
+
+  color: #68766d;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+}
+
+.logout-button:hover {
+  background: #f8eeee;
+
+  border-color: #ead1d1;
+
+  color: #a34b4b;
+
+  transform: translateY(-1px);
+}
+
+.logout-button:active {
+  transform: translateY(0);
+}
+
+
+/* =================================
+   DESKTOP COMPACT
+================================= */
+
+@media (max-width: 1250px) {
+
+  .navbar-container {
+    padding: 0 22px;
+
+    gap: 12px;
+  }
+
+  .navbar-links {
+    gap: 1px;
+  }
+
+  .nav-link {
+    padding: 9px 8px;
+
+    font-size: 12px;
+  }
+
+  .logo-text {
+    font-size: 16px;
+  }
+
+  .farmer-profile {
+    padding: 7px 9px;
+  }
+
+}
+
+
+/* =================================
+   TABLET
+================================= */
+
+@media (max-width: 1050px) {
+
+  .navbar-container {
+    min-height: 68px;
+
+    padding: 0 18px;
+
+    gap: 10px;
+  }
+
+  .navbar-links {
+    overflow-x: auto;
+
+    scrollbar-width: none;
+  }
+
+  .navbar-links::-webkit-scrollbar {
+    display: none;
+  }
+
+  .nav-link {
+    padding: 8px 9px;
+
+    font-size: 11px;
+  }
+
+  .farmer-profile > span:last-child {
+    display: none;
+  }
+
+}
+
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 760px) {
+
+  .navbar-container {
+    min-height: auto;
+
+    padding: 12px 15px;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+  }
+
+  .navbar-logo {
+    order: 1;
+  }
+
+  .navbar-user {
+    order: 2;
+
+    margin-left: auto;
+  }
+
+  .navbar-links {
+    order: 3;
+
+    width: 100%;
+
+    justify-content: flex-start;
+
+    padding: 2px 0 4px;
+
+    overflow-x: auto;
+  }
+
+  .nav-link {
+    padding: 8px 11px;
+
+    font-size: 11px;
+  }
+
+  .nav-link.active::after {
+    display: none;
+  }
+
+  .farmer-profile {
+    padding: 7px 9px;
+  }
+
+  .logout-button {
+    padding: 8px 10px;
+
+    font-size: 11px;
+  }
+
+}
+
+
+/* =================================
+   SMALL MOBILE
+================================= */
+
+@media (max-width: 480px) {
+
+  .navbar-container {
+    padding: 10px 12px;
+  }
+
+  .logo-icon {
+    width: 34px;
+    height: 34px;
+
+    font-size: 18px;
+  }
+
+  .logo-text {
+    font-size: 15px;
+  }
+
+  .navbar-links {
+    gap: 2px;
+  }
+
+  .nav-link {
+    padding: 7px 9px;
+
+    font-size: 10px;
+  }
+
+}
