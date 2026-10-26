@@ -1,0 +1,703 @@
+/* ================================
+   REGISTER PAGE
+================================ */
+
+.register-page {
+  min-height: 100vh;
+  display: flex;
+  background: #f8fbf7;
+}
+
+
+/* ================================
+   LEFT VISUAL SECTION
+================================ */
+
+.register-visual {
+  width: 52%;
+  min-height: 100vh;
+
+  position: relative;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(13, 66, 35, 0.97),
+      rgba(30, 104, 55, 0.9)
+    ),
+    url("https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1600&q=85");
+
+  background-size: cover;
+  background-position: center;
+
+  color: white;
+  overflow: hidden;
+}
+
+
+.register-visual::before {
+  content: "";
+
+  position: absolute;
+
+  width: 420px;
+  height: 420px;
+
+  right: -150px;
+  top: -120px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.07);
+
+  filter: blur(2px);
+}
+
+
+.register-visual::after {
+  content: "";
+
+  position: absolute;
+
+  width: 300px;
+  height: 300px;
+
+  left: -120px;
+  bottom: -100px;
+
+  border-radius: 50%;
+
+  background: rgba(183, 225, 170, 0.08);
+}
+
+
+.register-visual-overlay {
+  min-height: 100vh;
+
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 42px 55px;
+}
+
+
+/* ================================
+   BRAND
+================================ */
+
+.register-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  font-size: 21px;
+  letter-spacing: -0.3px;
+}
+
+
+.register-brand > span {
+  width: 44px;
+  height: 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 13px;
+
+  background: rgba(255, 255, 255, 0.13);
+
+  backdrop-filter: blur(10px);
+
+  font-size: 23px;
+}
+
+
+.register-brand strong {
+  font-weight: 700;
+}
+
+
+.register-brand strong span {
+  color: #b9e68c;
+}
+
+
+/* ================================
+   HERO CONTENT
+================================ */
+
+.register-hero-content {
+  max-width: 610px;
+
+  margin-top: auto;
+  margin-bottom: auto;
+
+  padding-top: 60px;
+}
+
+
+.register-tag {
+  display: inline-flex;
+  align-items: center;
+
+  padding: 9px 15px;
+
+  border-radius: 30px;
+
+  background: rgba(255, 255, 255, 0.11);
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  backdrop-filter: blur(10px);
+
+  font-size: 13px;
+  font-weight: 600;
+
+  letter-spacing: 0.2px;
+
+  color: #dff5c8;
+}
+
+
+.register-hero-content h1 {
+  margin: 24px 0 18px;
+
+  font-size: clamp(42px, 4vw, 64px);
+
+  line-height: 1.08;
+
+  letter-spacing: -2px;
+
+  font-weight: 750;
+}
+
+
+.register-hero-content h1 span {
+  color: #b9e68c;
+}
+
+
+.register-hero-content > p {
+  max-width: 550px;
+
+  font-size: 16px;
+  line-height: 1.75;
+
+  color: rgba(255, 255, 255, 0.78);
+}
+
+
+/* ================================
+   FEATURES
+================================ */
+
+.register-features {
+  display: flex;
+  flex-direction: column;
+
+  gap: 17px;
+
+  margin-top: 38px;
+}
+
+
+.register-features > div {
+  display: flex;
+  align-items: center;
+
+  gap: 15px;
+}
+
+
+.register-features > div > span {
+  width: 43px;
+  height: 43px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px;
+
+  background: rgba(255, 255, 255, 0.1);
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  font-size: 20px;
+}
+
+
+.register-features strong {
+  display: block;
+
+  margin-bottom: 3px;
+
+  font-size: 14px;
+
+  font-weight: 650;
+}
+
+
+.register-features small {
+  color: rgba(255, 255, 255, 0.62);
+
+  font-size: 12px;
+}
+
+
+/* ================================
+   VISUAL BOTTOM
+================================ */
+
+.register-visual-bottom {
+  font-size: 12px;
+
+  color: rgba(255, 255, 255, 0.5);
+
+  letter-spacing: 0.5px;
+}
+
+
+/* ================================
+   FORM SECTION
+================================ */
+
+.register-form-section {
+  width: 48%;
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 40px 50px;
+
+  background: #ffffff;
+}
+
+
+.register-form-container {
+  width: 100%;
+  max-width: 480px;
+}
+
+
+/* ================================
+   MOBILE BRAND
+================================ */
+
+.register-mobile-brand {
+  display: none;
+
+  align-items: center;
+  gap: 10px;
+
+  margin-bottom: 35px;
+
+  color: #173d24;
+
+  font-size: 20px;
+}
+
+
+.register-mobile-brand > span {
+  font-size: 23px;
+}
+
+
+.register-mobile-brand strong span {
+  color: #3e8c45;
+}
+
+
+/* ================================
+   HEADING
+================================ */
+
+.register-heading {
+  margin-bottom: 30px;
+}
+
+
+.register-small-label {
+  display: inline-block;
+
+  margin-bottom: 10px;
+
+  color: #4c9251;
+
+  font-size: 11px;
+  font-weight: 750;
+
+  letter-spacing: 1.7px;
+}
+
+
+.register-heading h2 {
+  margin: 0 0 8px;
+
+  color: #173d24;
+
+  font-size: 34px;
+
+  line-height: 1.15;
+
+  letter-spacing: -1px;
+
+  font-weight: 720;
+}
+
+
+.register-heading p {
+  margin: 0;
+
+  color: #718077;
+
+  font-size: 14px;
+
+  line-height: 1.6;
+}
+
+
+/* ================================
+   FORM
+================================ */
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+
+  gap: 18px;
+}
+
+
+.register-field {
+  display: flex;
+  flex-direction: column;
+
+  gap: 8px;
+}
+
+
+.register-field label {
+  color: #274c32;
+
+  font-size: 13px;
+
+  font-weight: 650;
+}
+
+
+.register-input-wrapper {
+  height: 52px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 11px;
+
+  padding: 0 15px;
+
+  border: 1px solid #dce7df;
+
+  border-radius: 12px;
+
+  background: #fbfdfb;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+
+.register-input-wrapper:focus-within {
+  background: #ffffff;
+
+  border-color: #66a96d;
+
+  box-shadow:
+    0 0 0 4px rgba(82, 150, 91, 0.09);
+}
+
+
+.register-input-wrapper > span {
+  width: 22px;
+
+  text-align: center;
+
+  font-size: 16px;
+}
+
+
+.register-input-wrapper input {
+  width: 100%;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  color: #173d24;
+
+  font-size: 14px;
+}
+
+
+.register-input-wrapper input::placeholder {
+  color: #9aa9a0;
+}
+
+
+/* ================================
+   ERROR
+================================ */
+
+.register-error {
+  padding: 11px 13px;
+
+  border-radius: 9px;
+
+  background: #fff1f0;
+
+  border: 1px solid #ffd3cf;
+
+  color: #b33a32;
+
+  font-size: 12px;
+
+  line-height: 1.5;
+}
+
+
+/* ================================
+   SUCCESS
+================================ */
+
+.register-success {
+  padding: 11px 13px;
+
+  border-radius: 9px;
+
+  background: #eef9ee;
+
+  border: 1px solid #cbe8cc;
+
+  color: #2f7538;
+
+  font-size: 12px;
+
+  line-height: 1.5;
+}
+
+
+/* ================================
+   REGISTER BUTTON
+================================ */
+
+.register-button {
+  width: 100%;
+  height: 52px;
+
+  margin-top: 4px;
+
+  border: none;
+
+  border-radius: 12px;
+
+  background: linear-gradient(
+    135deg,
+    #26733c,
+    #4b9a50
+  );
+
+  color: white;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 8px 20px rgba(43, 115, 58, 0.2);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    opacity 0.2s ease;
+}
+
+
+.register-button:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 12px 26px rgba(43, 115, 58, 0.27);
+}
+
+
+.register-button:active {
+  transform: translateY(0);
+}
+
+
+.register-button:disabled {
+  opacity: 0.65;
+
+  cursor: not-allowed;
+
+  transform: none;
+}
+
+
+/* ================================
+   LOGIN LINK
+================================ */
+
+.register-login-text {
+  margin-top: 25px;
+
+  text-align: center;
+
+  color: #7a887f;
+
+  font-size: 13px;
+}
+
+
+.register-login-link {
+  margin-left: 5px;
+
+  color: #367d40;
+
+  font-weight: 700;
+
+  text-decoration: none;
+}
+
+
+.register-login-link:hover {
+  text-decoration: underline;
+}
+
+
+/* ================================
+   FOOTER NOTE
+================================ */
+
+.register-footer-note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  margin-top: 27px;
+
+  color: #9aa69f;
+
+  font-size: 11px;
+
+  text-align: center;
+
+  line-height: 1.5;
+}
+
+
+.register-footer-note span {
+  font-size: 13px;
+}
+
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 1050px) {
+
+  .register-visual {
+    width: 48%;
+  }
+
+  .register-form-section {
+    width: 52%;
+    padding: 35px;
+  }
+
+  .register-visual-overlay {
+    padding: 35px;
+  }
+
+  .register-hero-content h1 {
+    font-size: 45px;
+  }
+
+}
+
+
+@media (max-width: 800px) {
+
+  .register-page {
+    display: block;
+  }
+
+  .register-visual {
+    display: none;
+  }
+
+  .register-form-section {
+    width: 100%;
+    min-height: 100vh;
+
+    padding: 35px 24px;
+  }
+
+  .register-form-container {
+    max-width: 500px;
+  }
+
+  .register-mobile-brand {
+    display: flex;
+  }
+
+}
+
+
+@media (max-width: 480px) {
+
+  .register-form-section {
+    padding: 28px 18px;
+  }
+
+  .register-mobile-brand {
+    margin-bottom: 28px;
+  }
+
+  .register-heading h2 {
+    font-size: 29px;
+  }
+
+  .register-heading {
+    margin-bottom: 25px;
+  }
+
+  .register-form {
+    gap: 16px;
+  }
+
+  .register-input-wrapper {
+    height: 50px;
+  }
+
+  .register-button {
+    height: 50px;
+  }
+
+}
